@@ -19,12 +19,12 @@ The project follows the MVVM (Model-View-ViewModel) architecture:
 
 | Screenshot | Description | Image |
 |---|---|---|
-| Initial State | The login screen when the app is first launched. | <img src="screenshots/login_initial.png" alt="Login Initial" height="480"> |
-| Validation Errors| The login screen with empty fields, highlighting validation errors. | <img src="screenshots/login_empty.png" alt="Login Empty" height="480"> |
-| Input Provided | The login screen with username and password entered. | <img src="screenshots/login_input.png" alt="Login Input" height="480"> |
-| Authentication in Progress | The login screen displaying a loading indicator during authentication. | <img src="screenshots/login_loading.png" alt="Login Loading" height="480"> |
-| Authentication Error | The login screen showing an error message after an unsuccessful login attempt. | <img src="screenshots/login_error.png" alt="Login Error" height="480"> |
-| Successful Login | The welcome screen displayed after a successful login. | <img src="screenshots/welcome.png" alt="Welcome" height="480"> |
+| Initial State | The login screen when the app is first launched. | <img src="screenshots/login_initial.png" alt="Login Initial" width="300"> |
+| Validation Errors| The login screen with empty fields, highlighting validation errors. | <img src="screenshots/login_empty.png" alt="Login Empty" width="300"> |
+| Input Provided | The login screen with username and password entered. | <img src="screenshots/login_input.png" alt="Login Input" width="300"> |
+| Authentication in Progress | The login screen displaying a loading indicator during authentication. | <img src="screenshots/login_loading.png" alt="Login Loading" width="300"> |
+| Authentication Error | The login screen showing an error message after an unsuccessful login attempt. | <img src="screenshots/login_error.png" alt="Login Error" width="300"> |
+| Successful Login | The welcome screen displayed after a successful login. | <img src="screenshots/welcome.png" alt="Welcome" width="300"> |
 
 ## Dependencies
 
