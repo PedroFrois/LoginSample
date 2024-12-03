@@ -18,6 +18,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
+import androidx.core.content.ContextCompat.getString
+import com.example.loginsample.R
 
 @Composable
 fun LoginScreen(
@@ -37,7 +39,7 @@ fun LoginScreen(
         OutlinedTextField(
             value = loginViewModel.username,
             onValueChange = { loginViewModel.updateUsername(it) },
-            label = { Text("Username") },
+            label = { Text(getString(context, R.string.username_label)) },
             isError = uiState.value.isError(),
             enabled = uiState.value.isLoading().not(),
         )
@@ -47,7 +49,7 @@ fun LoginScreen(
         OutlinedTextField(
             value = loginViewModel.password,
             onValueChange = { loginViewModel.updatePassword(it) },
-            label = { Text("Password") },
+            label = { Text(getString(context, R.string.password_label)) },
             visualTransformation = PasswordVisualTransformation(),
             isError = uiState.value.isError(),
             enabled = uiState.value.isLoading().not(),
@@ -61,7 +63,7 @@ fun LoginScreen(
                 loginViewModel.authenticate()
             },
         ) {
-            Text("Login")
+            Text(getString(context, R.string.login_button))
         }
 
         if (uiState.value.isLoading())
@@ -72,20 +74,16 @@ fun LoginScreen(
 
         if (uiState.value.isError())
             uiState.value.let {
-                it as LoginUiState.Error
-                when (it.errorType) {
-                    ErrorType.InvalidCredentials -> Toast.makeText(
-                        context,
-                        "Invalid username or password",
-                        Toast.LENGTH_SHORT
-                    ).show()
-
-                    ErrorType.EmptyCredentials -> Toast.makeText(
-                        context,
-                        "Please enter username and password",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                val messageResource = when ((it as LoginUiState.Error).errorType) {
+                    ErrorType.InvalidCredentials -> R.string.invalid_credentials
+                    ErrorType.EmptyCredentials -> R.string.empty_credentials
                 }
+
+                Toast.makeText(
+                    context,
+                    getString(context, messageResource),
+                    Toast.LENGTH_SHORT
+                ).show()
             }
     }
 }

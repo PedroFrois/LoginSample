@@ -10,7 +10,7 @@ interface LoginRepository {
 
 class LoginRepositoryImpl : LoginRepository {
     override suspend fun authenticate(username: String, password: String): Boolean {
-        delay(Duration.ofSeconds(1))
-        return username == "admin" && password == "password"
+        delay(Duration.ofSeconds(1)) // simulating backend call
+        return username == "admin" && password == "password" // in a real world scenario, this would be a backend call
     }
 }

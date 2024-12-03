@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">LoginSample</string>
+    <string name="invalid_credentials">Invalid username or password</string>
+    <string name="empty_credentials">Please enter username and password</string>
+    <string name="login_button">Login</string>
+    <string name="username_label">Username</string>
+    <string name="password_label">Password</string>
+    <string name="welcome_title_with_username">Welcome, %1$s!</string>
+    <string name="welcome_title">Welcome!</string>
+    <string name="welcome_message">This is the welcome screen.</string>
+
+
 </resources>

@@ -10,12 +10,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import com.example.loginsample.R
 
 @Composable
 fun WelcomeScreen(
     username: String?
 ) {
+    val context = LocalContext.current.applicationContext
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -25,13 +28,13 @@ fun WelcomeScreen(
     ) {
 
         username?.let {
-            Text("Welcome, $it!")
+            Text(context.getString(R.string.welcome_title_with_username, it))
         } ?: run {
-            Text("Welcome!")
+            Text(context.getString(R.string.welcome_title))
         }
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        Text("This is the welcome screen.")
+        Text(context.getString(R.string.welcome_message))
     }
 }

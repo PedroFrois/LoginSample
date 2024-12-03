@@ -23,12 +23,14 @@ class MainActivity : ComponentActivity() {
         setContent {
             LoginSampleTheme {
                 Surface(modifier = Modifier.fillMaxSize()) {
-                    LoginScreen(loginViewModel,
+                    LoginScreen(
+                        loginViewModel,
                         onSuccessfulLogin = { username ->
                             val intent = Intent(this, WelcomeActivity::class.java)
                             intent.putExtra("username", username)
-                            startActivity(intent)
-                        })
+                            startActivity(intent) // In a real world scenario, this would be replaced with navigation
+                        },
+                    )
                 }
             }
         }
