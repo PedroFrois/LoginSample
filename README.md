@@ -15,6 +15,15 @@ The project follows the MVVM (Model-View-ViewModel) architecture:
 * **ViewModel:** Handles the login logic and state management.
 * **Repository:** Provides data access (in this case, a simple in-memory authentication).
 
+## Screenshots
+
+![Login Initial](screenshots/login_initial.png)
+![Login Empty](screenshots/login_empty.png)
+![Login Input](screenshots/login_input.png)
+![Login Loading](screenshots/login_loading.png)
+![Login Error](screenshots/login_error.png)
+![Welcome](screenshots/welcome.png)
+
 ## Dependencies
 
 * Jetpack Compose
