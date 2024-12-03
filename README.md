@@ -17,12 +17,14 @@ The project follows the MVVM (Model-View-ViewModel) architecture:
 
 ## Screenshots
 
-![Login Initial](screenshots/login_initial.png)
-![Login Empty](screenshots/login_empty.png)
-![Login Input](screenshots/login_input.png)
-![Login Loading](screenshots/login_loading.png)
-![Login Error](screenshots/login_error.png)
-![Welcome](screenshots/welcome.png)
+| Screenshot | Description | Image |
+|---|---|---|
+| Initial State | The login screen when the app is first launched. | <img src="screenshots/login_initial.png" alt="Login Initial" height="480"> |
+| Validation Errors| The login screen with empty fields, highlighting validation errors. | <img src="screenshots/login_empty.png" alt="Login Empty" height="480"> |
+| Input Provided | The login screen with username and password entered. | <img src="screenshots/login_input.png" alt="Login Input" height="480"> |
+| Authentication in Progress | The login screen displaying a loading indicator during authentication. | <img src="screenshots/login_loading.png" alt="Login Loading" height="480"> |
+| Authentication Error | The login screen showing an error message after an unsuccessful login attempt. | <img src="screenshots/login_error.png" alt="Login Error" height="480"> |
+| Successful Login | The welcome screen displayed after a successful login. | <img src="screenshots/welcome.png" alt="Welcome" height="480"> |
 
 ## Dependencies
 
@@ -41,7 +43,7 @@ The project follows the MVVM (Model-View-ViewModel) architecture:
 
 1. Enter a username and password.
 2. Click the "Login" button.
-3. If the credentials are valid, you will be navigated to a welcome screen.
+3. If the credentials are valid (username = admin, password = password), you will be navigated to a welcome screen.
 4. If the credentials are invalid or the fields are empty, an error message will be displayed.
 
 ## Testing
